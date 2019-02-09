@@ -1,0 +1,263 @@
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0F0F12;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.box-shadow {
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Header */
+header {
+    background: #081C24;
+}
+
+@media (max-width: 800px) {
+    header {
+        position: -webkit-sticky;
+        position: sticky;
+        z-index: 1;
+        top: -1px;
+    }
+}
+
+header .header {
+    display: flex;
+    flex-direction: column;
+}
+
+header .logo img {
+    width: 3rem;
+}
+
+.logo-btn_menu {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-toggle {
+    color: #fff;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    header nav {
+        position: relative;
+        left: -100%;
+        display: none;
+    }
+    header nav.active {
+        left: 0;
+        display: block;
+    }
+}
+
+header nav ul li {
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+header nav ul li a {
+    color: #fff;
+    display: block;
+    line-height: 50px;
+}
+
+header nav ul li a:hover {
+    background: #01D277;
+}
+
+@media (min-width: 800px) {
+    header .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+    }
+    header nav ul {
+        display: flex;
+    }
+    header nav ul li {
+        margin: 0 10px;
+        border-bottom: none;
+    }
+    header nav ul li a:hover {
+        background: none;
+        color: #01D277;
+    }
+    .menu-toggle {
+        display: none;
+    }
+}
+
+
+/* Main */
+main {
+    padding: 14px 0; 
+}
+
+.movie-content {
+    padding: 14px;
+    text-align: center;
+}
+
+/* .movie, .tv */
+.movie-content .movie, .movie-content .tv {
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .movie-content .movie, .movie-content .tv {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto;
+        grid-gap: 2rem;
+        grid-template-areas:
+            "title title"
+            "image details";
+    }
+}
+
+.movie-content .movie h1, 
+.movie-content .tv h1 {
+    padding: 20px 0;
+    grid-area: title;
+}
+
+.movie-content .movie h1 span, 
+.movie-content .tv h1 span {
+    opacity: 0.6;
+}
+
+.movie-content .movie img, 
+.movie-content .tv img {
+    padding: 20px 0;
+    max-width: 300px;
+    margin: 0 auto;
+    grid-area: image;
+}
+
+/* .details */
+.movie-content .movie .details, 
+.movie-content .tv .details {
+    grid-area: details;
+}
+
+.movie-content .movie .details p, 
+.movie-content .tv .details p {
+    padding: 20px 0;
+}
+
+/* .statistic */
+.statistic {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+}
+
+/* .vote */
+.vote .vote-average {
+    width: 25%;
+}
+
+.vote .vote-bar-value {
+    width: 50%;
+    padding: 10px 0;
+}
+
+@media (max-width: 500px) {
+    .vote .vote-bar-value {
+        width: 75%;
+    }
+}
+
+.vote .vote-bar-value .vote-bar {
+    background-color: #a6a5a5;
+    border-radius: 8px;
+}
+
+.vote .vote-bar-value .vote-bar .vote-value {
+    background-color: #01D277;
+    height: 1em;
+    border-radius: 8px 0 0 8px;
+}
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background: #081C24;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer .social a {
+    margin: 0 .5rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: all 0.5s;
+}
+
+footer .social .facebook:hover {
+    color: #01D277;
+}
+
+footer .social .twitter:hover {
+    color: #01D277;
+}
+
+footer .copyright {
+    color: #fff;
+    background: black;
+    text-align: center;
+}
