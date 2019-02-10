@@ -170,6 +170,12 @@ main {
     max-width: 300px;
     margin: 0 auto;
     grid-area: image;
+    transition: all 1s;
+}
+
+.movie-content .movie img:hover, 
+.movie-content .tv img:hover {
+    opacity: .5;
 }
 
 /* .details */
