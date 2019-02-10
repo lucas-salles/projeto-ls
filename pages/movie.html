@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-
+<body onload="loading();">
+    <div id="load" class="load"></div>
     <header>
         <div class="header container">
             <div class="logo-btn_menu">
@@ -50,7 +50,9 @@
                 $('nav').toggleClass('active')
             })
         })
-        
+        function loading(){
+            $('#load').css('display','none');
+        }
     </script>
     <script src="../dist/movie.js"></script>
     <script src="../js/lightbox.js"></script>
