@@ -1,4 +1,18 @@
+import $ from 'jquery'
 import { showMoviePopularity, showTVPopularity, showSearch, showWarningMessage, baseURL, apiKey, warningMessage } from './lib.mjs'
+
+// Menu mobile
+$(document).ready(function () {
+    $('.menu-toggle').click(function () {
+        $('nav').toggleClass('active')
+    })
+})
+
+// Loading enquanto a página é carregada
+$(document).ready(function () {
+    $('#load').css('display','none');
+})
+
 
 const filmes = document.getElementById('filmes')
 const series = document.getElementById('series')
@@ -41,11 +55,11 @@ function getMoviePopularity() {
     series.classList.add('hidden-color')
     const url = `${baseURL}discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=popularity.desc`
     fetch(url)
-    .then(res => res.json())
-    .then(json => {
-        const movies = json.results
-        showMoviePopularity(movies)
-    })
+        .then(res => res.json())
+        .then(json => {
+            const movies = json.results
+            showMoviePopularity(movies)
+        })
 }
 
 // Função para buscar os dados das séries mais populares
@@ -89,7 +103,7 @@ function getSearch(search) {
         .then(res => res.json())
         .then(json => {
             // Quando se tem resultados é chamada a função showSearch() para exibir o conteúdo
-            if(json.total_results != 0) {
+            if (json.total_results != 0) {
                 warningMessage.classList.add('hidden')
 
                 showSearch(json.results)
@@ -144,5 +158,5 @@ function getImdbId(tmdbId, mediaType) {
 
 // Função que abre a página movie.html em outra aba do browser e passa o id do filme através da url
 function runMovie(valor) {
-    window.location = "pages/movie.html?id="+valor
+    window.location = "pages/movie.html?id=" + valor
 }

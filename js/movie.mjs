@@ -1,5 +1,20 @@
 // Script usado no arquivo movie.html
+import 'lightbox2/dist/js/lightbox'
+import $ from 'jquery'
 import { showMovie, showTV, baseURL, apiKey } from './lib.mjs'
+
+// Menu mobile
+$(document).ready(function () {
+    $('.menu-toggle').click(function () {
+        $('nav').toggleClass('active')
+    })
+})
+
+// Loading enquanto a página é carregada
+$(document).ready(function () {
+    $('#load').css('display','none');
+})
+
 
 // Para definir a altura mínima do main como sendo a altura da janela do dispositivo
 const main = document.querySelector('main')

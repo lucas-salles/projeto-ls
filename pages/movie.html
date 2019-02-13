@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <title>Document</title>
 </head>
-<body onload="loading();">
+
+<body>
     <div id="load" class="load"></div>
     <header>
         <div class="header container">
@@ -43,18 +45,8 @@
             <p>&copy; 2019 - Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.menu-toggle').click(function(){
-                $('nav').toggleClass('active')
-            })
-        })
-        function loading(){
-            $('#load').css('display','none');
-        }
-    </script>
+
     <script src="../dist/movie.js"></script>
-    <script src="../js/lightbox.js"></script>
 </body>
+
 </html>
