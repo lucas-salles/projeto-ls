@@ -99,7 +99,6 @@ function showWarningMessage() {
 
 // Função para criar dinamicamente e exibir o conteúdo do filme
 function showMovie(movie) {
-    console.log(movie)
     for(const content of movie) {
         // Ano de lançamento do filme
         const release = content.release_date.split('-')[0]

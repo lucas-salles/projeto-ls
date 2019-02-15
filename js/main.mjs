@@ -1,5 +1,14 @@
 import $ from 'jquery'
+import 'jquery'
+import 'bootstrap'
+import 'popper.js'
+import 'bootstrap/js/dist/tooltip'
 import { showMoviePopularity, showTVPopularity, showSearch, showWarningMessage, baseURL, apiKey, warningMessage } from './lib.mjs'
+
+// Tooltip do bootstrap
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
 
 // Menu mobile
 $(document).ready(function () {
