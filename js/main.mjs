@@ -19,7 +19,7 @@ $(document).ready(function () {
 
 // Loading enquanto a página é carregada
 $(document).ready(function () {
-    $('#load').css('display','none');
+    $('#load').css('display', 'none');
 })
 
 
@@ -169,3 +169,25 @@ function getImdbId(tmdbId, mediaType) {
 function runMovie(valor) {
     window.location = "pages/movie.html?id=" + valor
 }
+
+
+
+
+// Eventos do botão que leva pro topo da página
+const navTop = document.querySelector('.nav-top')
+document.addEventListener('scroll', () => {
+    if (window.scrollY > window.innerHeight * 1 / 3) {
+        navTop.className = 'nav-top'
+    }
+    else {
+        navTop.className = 'nav-top hidden'
+    }
+})
+
+navTop.addEventListener('click', () => {
+    window.scrollTo({
+        behavior: 'smooth',
+        top: 0,
+        left: 0
+    })
+})

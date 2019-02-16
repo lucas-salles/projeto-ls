@@ -281,6 +281,36 @@ main .main-content .filme .title:hover {
     color: #01D277;
 }
 
+/* nav-top */
+.nav-top {
+    background-color: #383838;
+    color: #fff;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .5s;
+}
+  
+.nav-top:hover {
+    background-color: #01D277;
+    cursor: pointer;
+}
+  
+.nav-top.hidden {
+    right: -10rem;
+}
+  
+.nav-top .fa-chevron-up {
+    width: 1rem;
+    height: 1rem;
+    fill: #fff;
+}
+
 
 
 /* Footer */
