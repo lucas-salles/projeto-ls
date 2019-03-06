@@ -110,10 +110,16 @@ function showMovie(movie) {
 
         const movie = `<div class="movie">
             <h1>${content.title} <span>(${release})</span></h1>
-            <a href="${img1}" data-lightbox="${content.title}" data-title="${content.title}">
-                <img src="${poster}">
-            </a>
-            <a href="${img2}" data-lightbox="${content.title}" data-title="${content.title}" class="hidden"></a>
+            <div class="image">
+                <a href="${img1}" data-lightbox="${content.title}" data-title="${content.title}">
+                    <img src="${poster}">
+                    <div class="desc">
+                        <i class="fas fa-desktop"></i>
+                        <p>Poster</p>
+                    </div>
+                </a>
+                <a href="${img2}" data-lightbox="${content.title}" data-title="${content.title}" class="hidden"></a>
+            </div>
             <div class="details">
                 <h2>Sinopse</h2>
                 <p>${content.overview}</p>
@@ -148,10 +154,16 @@ function showTV(tv) {
 
         const tv = `<div class="tv">
             <h1>${content.name} <span>(${release})</span></h1>
-            <a href="${img1}" data-lightbox="${content.name}" data-title="${content.name}">
-                <img src="${poster}">
-            </a>
-            <a href="${img2}" data-lightbox="${content.name}" data-title="${content.name}" class="hidden"></a>
+            <div class="image">
+                <a href="${img1}" data-lightbox="${content.title}" data-title="${content.title}">
+                    <img src="${poster}">
+                    <div class="desc">
+                        <i class="fas fa-desktop"></i>
+                        <p>Poster</p>
+                    </div>
+                </a>
+                <a href="${img2}" data-lightbox="${content.title}" data-title="${content.title}" class="hidden"></a>
+            </div>
             <div class="details">
                 <h2>Sinopse</h2>
                 <p>${content.overview}</p>

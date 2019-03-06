@@ -171,6 +171,30 @@ main {
     opacity: 0.6;
 }
 
+.image {
+    transition: all 0.5s;
+}
+
+.image:hover {
+    opacity: .5;
+}
+
+.desc {
+	position: relative;
+    bottom: 190px;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.image:hover .desc {
+	opacity: 1;
+}
+
+.fa-desktop {
+    font-size: 2rem;
+}
+
 .movie-content .movie img, 
 .movie-content .tv img {
     padding: 20px 0;
@@ -229,10 +253,6 @@ main {
     height: 1em;
     border-radius: 8px 0 0 8px;
 }
-
-
-
-
 
 
 
