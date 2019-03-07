@@ -172,11 +172,11 @@ main {
 }
 
 .image {
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 .image:hover {
-    opacity: .5;
+    opacity: .6;
 }
 
 .desc {
@@ -202,11 +202,6 @@ main {
     margin: 0 auto;
     grid-area: image;
     transition: all 1s;
-}
-
-.movie-content .movie img:hover, 
-.movie-content .tv img:hover {
-    opacity: .5;
 }
 
 /* .details */
